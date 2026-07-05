@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Александра Затеева — авторский дизайн интерьеров в Санкт-Петербурге</title>
+<meta name="description" content="Дизайнер интерьера Александра Затеева. Дизайн-проекты квартир и загородных домов в Санкт-Петербурге: концепция, чертежи, комплектация, визуализация, авторский надзор.">
+<meta property="og:title" content="Александра Затеева. Авторский дизайн интерьеров">
+<meta property="og:description" content="Дизайн-проекты квартир и загородных домов в Санкт-Петербурге. Безупречная эргономика в стильной оболочке.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zateeva.ru">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf9f7; --bg2:#f2efea; --ink:#1f1d1a; --muted:#7a746c;
+  --line:#e5e0d8; --accent:#a98a5b; --accent-dark:#8a6f45; --white:#fff;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.65;font-size:16px}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.sec-label{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.sec-title{font-size:clamp(32px,4.5vw,52px);margin-bottom:48px}
+
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,249,247,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.scrolled{border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--serif);font-size:22px;letter-spacing:.02em}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:34px;font-size:13px;letter-spacing:.06em}
+.nav-links a{color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-phone{font-size:13px;font-weight:500;letter-spacing:.03em}
+.burger{display:none;background:none;border:none;cursor:pointer;width:30px;height:22px;position:relative}
+.burger i,.burger i::before,.burger i::after{content:'';position:absolute;left:0;width:100%;height:1.5px;background:var(--ink);transition:.25s}
+.burger i{top:50%}
+.burger i::before{top:-8px}
+.burger i::after{top:8px}
+.mobile-menu{display:none;position:fixed;inset:72px 0 0 0;background:var(--bg);z-index:99;padding:40px 24px;flex-direction:column;gap:26px;font-size:18px}
+.mobile-menu.open{display:flex}
+
+/* ---------- cover ---------- */
+.cover{position:relative;height:calc(100vh - 72px);min-height:480px;max-height:900px;margin-top:72px;overflow:hidden}
+.cover-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%}
+.cover::after{content:'';position:absolute;inset:0;background:rgba(15,13,11,.16)}
+.cover-logo{position:absolute;inset:0;margin:auto;width:min(82vw,720px);height:auto;z-index:2;filter:drop-shadow(0 2px 22px rgba(0,0,0,.45))}
+.cover-scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:2;color:#fff;font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.85;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+/* ---------- about / intro ---------- */
+.about h1{font-size:clamp(36px,4.5vw,56px);margin-bottom:6px}
+.about .tagline{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.2vw,26px);color:var(--accent-dark);margin-bottom:24px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);transition:.25s;cursor:pointer;background:transparent;font-family:var(--sans)}
+.btn.solid{background:var(--ink);color:var(--white)}
+.btn.solid:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn.ghost:hover{background:var(--ink);color:var(--white)}
+
+/* ---------- about ---------- */
+.about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.about-img{max-width:440px;margin:0 auto}
+.about-img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center}
+.about h2{font-size:clamp(30px,4vw,44px);margin-bottom:24px}
+.about p{color:#4d4841;margin-bottom:18px}
+.about .motto{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--ink);border-left:2px solid var(--accent);padding-left:22px;margin:30px 0}
+
+/* ---------- gallery ---------- */
+.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.g-card{position:relative;cursor:pointer;overflow:hidden;background:var(--bg2)}
+.g-card img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .6s ease}
+.g-card:hover img{transform:scale(1.05)}
+.g-card .g-cap{position:absolute;inset:auto 0 0 0;padding:56px 20px 18px;background:linear-gradient(transparent,rgba(20,18,15,.72));color:#fff;font-size:15px;letter-spacing:.02em}
+.g-card .g-count{position:absolute;top:14px;right:14px;background:rgba(20,18,15,.55);color:#fff;font-size:11px;letter-spacing:.08em;padding:5px 10px;border-radius:20px}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(18,16,13,.96);display:none;align-items:center;justify-content:center;flex-direction:column}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:80vh;object-fit:contain}
+.lb-title{color:#cfc9c0;font-size:14px;letter-spacing:.05em;margin-top:18px;text-align:center;padding:0 20px}
+.lb-desc{color:#8b857c;font-size:13px;line-height:1.55;margin-top:8px;text-align:center;padding:0 20px;max-width:640px}
+.lb-counter{color:#8b857c;font-size:12px;margin-top:6px;letter-spacing:.12em}
+.lb-btn{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:44px;cursor:pointer;padding:20px;opacity:.65;transition:opacity .2s;font-family:var(--serif);line-height:1}
+.lb-btn:hover{opacity:1}
+.lb-prev{left:6px}.lb-next{right:6px}
+.lb-close{position:absolute;top:16px;right:22px;background:none;border:none;color:#fff;font-size:34px;cursor:pointer;opacity:.65}
+.lb-close:hover{opacity:1}
+
+/* ---------- pricing ---------- */
+.pricing{background:var(--bg2)}
+.p-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.p-card{background:var(--white);padding:44px 36px;border:1px solid var(--line);display:flex;flex-direction:column;position:relative}
+.p-card.featured{border-color:var(--accent)}
+.p-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:5px 16px}
+.p-name{font-family:var(--serif);font-size:26px;margin-bottom:4px}
+.p-price{font-size:30px;font-weight:400;margin:14px 0 6px}
+.p-price span{font-size:15px;color:var(--muted)}
+.p-list{list-style:none;margin:26px 0 34px;flex:1}
+.p-list li{padding:12px 0;border-top:1px solid var(--line);font-size:14.5px;color:#4d4841}
+.p-list li strong{display:block;font-weight:500;color:var(--ink);margin-bottom:2px}
+.p-card .btn{justify-content:center}
+
+/* ---------- services ---------- */
+.s-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.s-card{border:1px solid var(--line);padding:34px 32px;background:var(--white);transition:border-color .25s}
+.s-card:hover{border-color:var(--accent)}
+.s-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:12px}
+.s-name{font-family:var(--serif);font-size:23px}
+.s-price{font-size:14px;color:var(--accent-dark);white-space:nowrap;font-weight:500}
+.s-card p{font-size:14.5px;color:var(--muted)}
+
+/* ---------- steps ---------- */
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px}
+.step-num{font-family:var(--serif);font-size:58px;color:var(--accent);opacity:.5;line-height:1;margin-bottom:14px}
+.step h3{font-size:22px;margin-bottom:10px}
+.step p{font-size:14.5px;color:var(--muted)}
+
+/* ---------- contact ---------- */
+.contact{background:#1f1d1a;color:#e9e5df;text-align:center;padding:110px 0}
+.contact .sec-label{color:var(--accent)}
+.contact h2{font-size:clamp(32px,4.5vw,50px);margin-bottom:18px;color:#fff}
+.contact p{color:#a9a29a;max-width:52ch;margin:0 auto 40px}
+.contact-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+.contact .btn{border-color:#57534d;color:#e9e5df}
+.contact .btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.contact .phone-big{font-family:var(--serif);font-size:clamp(26px,3.5vw,38px);color:#fff;display:block;margin-bottom:8px}
+.contact .city{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#8b857c}
+footer{background:#171512;color:#6f6a63;font-size:13px;padding:26px 0;text-align:center}
+
+/* reveal animation */
+.rev{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rev.vis{opacity:1;transform:none}
+
+@media(max-width:920px){
+  .about-grid{grid-template-columns:1fr;gap:44px}
+  .cover{height:62vh;min-height:380px}
+  .cover-logo{width:min(88vw,520px)}
+  .g-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .p-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+  .s-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links,.nav-phone{display:none}
+  .burger{display:block}
+  section{padding:72px 0}
+}
+@media(max-width:540px){
+  .g-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#" class="logo">Александра <span>Затеева</span></a>
+    <nav class="nav-links">
+      <a href="#about">Обо мне</a>
+      <a href="#works">Проекты</a>
+      <a href="#pricing">Стоимость</a>
+      <a href="#services">Услуги</a>
+      <a href="#steps">Этапы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a class="nav-phone" href="tel:+79500090660">+7 950 009-06-60</a>
+    <button class="burger" id="burger" aria-label="Меню"><i></i></button>
+  </div>
+</header>
+<nav class="mobile-menu" id="mmenu">
+  <a href="#about">Обо мне</a>
+  <a href="#works">Проекты</a>
+  <a href="#pricing">Стоимость</a>
+  <a href="#services">Услуги</a>
+  <a href="#steps">Этапы</a>
+  <a href="#contact">Контакты</a>
+  <a href="tel:+79500090660">+7 950 009-06-60</a>
+</nav>
+
+<div class="cover">
+  <img class="cover-bg" data-img="cover.png" alt="Интерьер спальни — проект Александры Затеевой">
+  <img class="cover-logo" data-img="logo.svg" alt="Aleksandra Zateeva — Interior Designer">
+  <a class="cover-scroll" href="#about">Листайте вниз</a>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-img rev"><img data-img="about.jpg" alt="Александра Затеева, дизайнер интерьера"></div>
+    <div class="rev">
+      <div class="sec-label">Дизайнер интерьера · Санкт-Петербург</div>
+      <h1>Александра Затеева</h1>
+      <div class="tagline">Безупречная эргономика в стильной оболочке</div>
+      <p>Авторские дизайн-проекты квартир и загородных домов — от концепции и чертежей до комплектации и авторского надзора.</p>
+      <div class="motto">Для меня счастье заказчика — самоцель. Я фанат дизайна: я просто люблю своё призвание и сделаю так, чтобы вы тоже полюбили ремонт и перестали испытывать стресс.</div>
+      <div class="hero-cta">
+        <a class="btn solid" href="#contact">Обсудить проект</a>
+        <a class="btn ghost" href="#works">Смотреть работы</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <div class="sec-label rev">Портфолио</div>
+    <h2 class="sec-title rev">Галерея работ</h2>
+    <div class="g-grid" id="ggrid"></div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="sec-label rev">Дизайн-проект под ключ</div>
+    <h2 class="sec-title rev">Стоимость</h2>
+    <div class="p-grid">
+      <div class="p-card rev">
+        <div class="p-name">Базовый</div>
+        <div class="p-price">2 900 ₽ <span>/ м²</span></div>
+        <ul class="p-list">
+          <li><strong>Разработка концепции</strong>Выбор стиля, палитры и материалов интерьера вместе с заказчиком</li>
+          <li><strong>Комплект чертежей</strong>Планировочное решение, план освещения, розеток, потолков, развёртки стен и пр.</li>
+          <li><strong>Комплектация объекта</strong>Подбор материалов, мебели и оборудования</li>
+        </ul>
+        <a class="btn ghost" href="#contact">Выбрать</a>
+      </div>
+      <div class="p-card featured rev">
+        <div class="p-badge">Популярный</div>
+        <div class="p-name">Оптимальный</div>
+        <div class="p-price">3 900 ₽ <span>/ м²</span></div>
+        <ul class="p-list">
+          <li><strong>Разработка концепции</strong>Выбор стиля, палитры и материалов интерьера вместе с заказчиком</li>
+          <li><strong>Комплект чертежей</strong>Планировочное решение, план освещения, розеток, потолков, развёртки стен и пр.</li>
+          <li><strong>Комплектация объекта</strong>Подбор материалов, мебели и оборудования</li>
+          <li><strong>Визуализация объекта</strong>Фотореалистичные изображения — интерьер в деталях до реализации</li>
+        </ul>
+        <a class="btn solid" href="#contact">Выбрать</a>
+      </div>
+      <div class="p-card rev">
+        <div class="p-name">Премиум</div>
+        <div class="p-price">5 900 ₽ <span>/ м²</span></div>
+        <ul class="p-list">
+          <li><strong>Разработка концепции</strong>Выбор стиля, палитры и материалов интерьера вместе с заказчиком</li>
+          <li><strong>Комплект чертежей</strong>Планировочное решение, план освещения, розеток, потолков, развёртки стен и пр.</li>
+          <li><strong>Комплектация объекта</strong>Подбор материалов, мебели и оборудования</li>
+          <li><strong>Визуализация объекта</strong>Фотореалистичные изображения — интерьер в деталях до реализации</li>
+          <li><strong>Безлимитные совместные выезды</strong>Мах 2 выезда в неделю (по 4 часа) и безлимитные консультации на время реализации проекта</li>
+        </ul>
+        <a class="btn ghost" href="#contact">Выбрать</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-label rev">Отдельные форматы</div>
+    <h2 class="sec-title rev">Другие услуги</h2>
+    <div class="s-grid">
+      <div class="s-card rev">
+        <div class="s-head"><div class="s-name">Экспресс дизайн-проект</div><div class="s-price">15 000 ₽</div></div>
+        <p>Планировочное решение любой площади. Идеальный выбор, если поджимают сроки: со схемой на руках вы сможете спланировать пространство и самостоятельно подобрать всё необходимое.</p>
+      </div>
+      <div class="s-card rev">
+        <div class="s-head"><div class="s-name">Комплектация</div><div class="s-price">1 000 ₽ / м²</div></div>
+        <p>Квартира от застройщика, и хочется поскорее заехать? Без перепланировки и переделки электрики — подберём правильную мебель и отделочные материалы.</p>
+      </div>
+      <div class="s-card rev">
+        <div class="s-head"><div class="s-name">Визуализация концепции</div><div class="s-price">10 000 ₽ / помещение</div></div>
+        <p>Высококлассные изображения вашего дома в выбранном стиле всего по фото голых стен — за один-два дня. Дальше, опираясь на рендеры, реализуете интерьер, придерживаясь концепции.</p>
+      </div>
+      <div class="s-card rev">
+        <div class="s-head"><div class="s-name">Визуализация</div><div class="s-price">1 000 ₽ / м²</div></div>
+        <p>Пространство спланировано, но что-то смущает? Визуализация поможет увидеть возможные ошибки до завершения ремонта, когда их исправление ещё не выливается в круглую сумму.</p>
+      </div>
+      <div class="s-card rev">
+        <div class="s-head"><div class="s-name">Авторский надзор</div><div class="s-price">300 ₽ / м² в месяц</div></div>
+        <p>Контроль за ходом ремонта: выезды на объект и отслеживание соответствия материалов и технических решений заложенным в проекте.</p>
+      </div>
+      <div class="s-card rev">
+        <div class="s-head"><div class="s-name">Хоум-стейджинг</div><div class="s-price">500 ₽ / м²</div></div>
+        <p>Ремонт делать не хочется, а стиля и уюта хочется? С небольшими вложениями до неузнаваемости изменим пространство, повысим ликвидность объекта или поразим гостей.</p>
+      </div>
+      <div class="s-card rev">
+        <div class="s-head"><div class="s-name">Выезд на подбор материалов</div><div class="s-price">5 000 ₽ / 4 часа</div></div>
+        <p>Вместе отправимся в магазины за идеальными материалами для вашего проекта: профессиональные рекомендации, образцы вживую и уверенные решения — без стресса и лишних трат.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="steps">
+  <div class="wrap">
+    <div class="sec-label rev">Как мы работаем</div>
+    <h2 class="sec-title rev">Этапы работы</h2>
+    <div class="steps-grid">
+      <div class="step rev">
+        <div class="step-num">01</div>
+        <h3>Концепция</h3>
+        <p>Общение и постановка ТЗ. Разработка концепции и стилистического решения на основе ваших пожеланий. Планировочное решение, рабочая документация.</p>
+      </div>
+      <div class="step rev">
+        <div class="step-num">02</div>
+        <h3>Комплектация</h3>
+        <p>Детальный подбор наполнения интерьера, совместные выезды в салоны. Ведомость отделочных материалов, сантехники и мебели с ценами и ссылками.</p>
+      </div>
+      <div class="step rev">
+        <div class="step-num">03</div>
+        <h3>Визуализация</h3>
+        <p>Фотореалистичные изображения в 3D Max в разных ракурсах, чтобы оценить будущий интерьер во всех деталях до начала ремонта.</p>
+      </div>
+      <div class="step rev">
+        <div class="step-num">04</div>
+        <h3>Реализация</h3>
+        <p>Ремонтные работы на основе подготовленных чертежей и референсов. Авторский надзор на всех этапах.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-label rev">Контакты</div>
+    <h2 class="rev">Обсудим ваш проект?</h2>
+    <p class="rev">Напишите в мессенджер или позвоните — расскажу, какой формат подойдёт именно вам, и отвечу на все вопросы.</p>
+    <div class="contact-links rev">
+      <a class="btn" href="https://wa.me/79500090660" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="https://t.me/Zateeva" target="_blank" rel="noopener">Telegram</a>
+    </div>
+    <a class="phone-big rev" href="tel:+79500090660">+7 950 009-06-60</a>
+    <div class="city rev">Санкт-Петербург</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> Александра Затеева · Авторский дизайн интерьеров · Санкт-Петербург</div>
+</footer>
+
+<!-- lightbox -->
+<div class="lb" id="lb">
+  <button class="lb-close" id="lbClose" aria-label="Закрыть">×</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Назад">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Вперёд">›</button>
+  <div class="lb-title" id="lbTitle"></div>
+  <div class="lb-desc" id="lbDesc"></div>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<script>
+const PROJECTS=[
+  {id:1,title:'Загородный дом для 4-х поколений',n:24,desc:''},
+  {id:2,title:'Квартира для большой семьи',n:10,desc:''},
+  {id:3,title:'Уместить всё на 70 квадратах',n:21,desc:''},
+  {id:4,title:'Однушка 34 м² в ЖК бизнес-класса Neva Residence',n:20,desc:''},
+  {id:5,title:'Хоумстейджинг трёхкомнатной квартиры',n:29,desc:''},
+  {id:6,title:'Санузел на 5 квадратах',n:8,desc:''},
+  {id:7,title:'Санузел',n:6,desc:''},
+  {id:8,title:'Загородный дом для семьи с детьми',n:19,desc:'Заказчики — семейная пара с двумя уже взрослыми детьми, которые будут приезжать к родителям время от времени. Со стилем определились очень быстро: «Джапанди», — в один голос сказали Андрей и Мария. И вот перед нами дом из клееного бруса в стиле джапанди.'},
+  {id:9,title:'Загородный дом для семьи с двумя детьми',n:13,desc:''}
+];
+const IMG=n=>(window.IMG_MAP&&window.IMG_MAP[n])||('img/'+n);
+
+// static images
+document.querySelectorAll('[data-img]').forEach(el=>el.src=IMG(el.dataset.img));
+
+// gallery grid
+const grid=document.getElementById('ggrid');
+PROJECTS.forEach((p,idx)=>{
+  const c=document.createElement('div');
+  c.className='g-card rev';
+  c.innerHTML=`<img loading="lazy" src="${IMG('p'+p.id+'-cover.jpg')}" alt="${p.title}">
+    <div class="g-count">${p.n} фото</div>
+    <div class="g-cap">${p.title}</div>`;
+  c.addEventListener('click',()=>openLb(idx,0));
+  grid.appendChild(c);
+});
+
+// lightbox
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),
+lbTitle=document.getElementById('lbTitle'),lbCounter=document.getElementById('lbCounter');
+let cur={p:0,i:0};
+function openLb(p,i){cur={p,i};render();lb.classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(){lb.classList.remove('open');document.body.style.overflow='';}
+function render(){
+  const pr=PROJECTS[cur.p];
+  const name='p'+pr.id+'-'+String(cur.i+1).padStart(2,'0')+'.jpg';
+  lbImg.src=IMG(name);
+  lbTitle.textContent=pr.title;
+  document.getElementById('lbDesc').textContent=(cur.i===0&&pr.desc)?pr.desc:'';
+  lbCounter.textContent=(cur.i+1)+' / '+pr.n;
+  // preload next
+  const nx=new Image();nx.src=IMG('p'+pr.id+'-'+String((cur.i+1)%pr.n+1).padStart(2,'0')+'.jpg');
+}
+function move(d){const pr=PROJECTS[cur.p];cur.i=(cur.i+d+pr.n)%pr.n;render();}
+document.getElementById('lbClose').onclick=closeLb;
+document.getElementById('lbPrev').onclick=()=>move(-1);
+document.getElementById('lbNext').onclick=()=>move(1);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')closeLb();
+  if(e.key==='ArrowLeft')move(-1);
+  if(e.key==='ArrowRight')move(1);
+});
+// swipe
+let tx=null;
+lb.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+lb.addEventListener('touchend',e=>{
+  if(tx===null)return;
+  const dx=e.changedTouches[0].clientX-tx;
+  if(Math.abs(dx)>50)move(dx>0?-1:1);
+  tx=null;
+},{passive:true});
+
+// header + reveal
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+
+// mobile menu
+const burger=document.getElementById('burger'),mmenu=document.getElementById('mmenu');
+burger.onclick=()=>mmenu.classList.toggle('open');
+mmenu.querySelectorAll('a').forEach(a=>a.onclick=()=>mmenu.classList.remove('open'));
+
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
