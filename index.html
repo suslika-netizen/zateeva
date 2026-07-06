@@ -54,7 +54,7 @@ header.scrolled{border-bottom-color:var(--line)}
 .cover{position:relative;height:calc(100vh - 72px);min-height:480px;max-height:900px;margin-top:72px;overflow:hidden}
 .cover-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%}
 .cover::after{content:'';position:absolute;inset:0;background:rgba(15,13,11,.16)}
-.cover-logo{position:absolute;inset:0;margin:auto;width:min(82vw,720px);height:auto;z-index:2;filter:drop-shadow(0 2px 22px rgba(0,0,0,.45))}
+.cover-logo{position:absolute;inset:0;margin:auto;width:min(94vw,1000px);max-height:86%;object-fit:contain;z-index:2;filter:drop-shadow(0 2px 22px rgba(0,0,0,.45))}
 .cover-scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:2;color:#fff;font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.85;animation:bob 2.4s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 
@@ -145,7 +145,7 @@ footer{background:#171512;color:#6f6a63;font-size:13px;padding:26px 0;text-align
 @media(max-width:920px){
   .about-grid{grid-template-columns:1fr;gap:44px}
   .cover{height:62vh;min-height:380px}
-  .cover-logo{width:min(88vw,520px)}
+  .cover-logo{width:min(94vw,560px)}
   .g-grid{grid-template-columns:repeat(2,1fr);gap:14px}
   .p-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}
   .s-grid{grid-template-columns:1fr}
