@@ -356,6 +356,7 @@ footer{background:#171512;color:#6f6a63;font-size:13px;padding:26px 0;text-align
   <div class="lb-counter" id="lbCounter"></div>
 </div>
 
+<script src="bot-projects.js"></script>
 <script>
 const PROJECTS=[
   {id:1,title:'Загородный дом для 4-х поколений',n:24,desc:''},
@@ -368,6 +369,7 @@ const PROJECTS=[
   {id:8,title:'Загородный дом для семьи с детьми',n:19,desc:'Заказчики — семейная пара с двумя уже взрослыми детьми, которые будут приезжать к родителям время от времени. Со стилем определились очень быстро: «Джапанди», — в один голос сказали Андрей и Мария. И вот перед нами дом из клееного бруса в стиле джапанди.'},
   {id:9,title:'Загородный дом для семьи с двумя детьми',n:13,desc:''}
 ];
+if(window.BOT_PROJECTS)PROJECTS.push(...window.BOT_PROJECTS);
 const IMG=n=>(window.IMG_MAP&&window.IMG_MAP[n])||('img/'+n);
 
 // static images
